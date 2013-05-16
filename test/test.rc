@@ -88,28 +88,24 @@ BEGIN
     DEFPUSHBUTTON   "确定",IDOK,113,41,50,14,WS_GROUP
 END
 
-IDD_TEST_DIALOG DIALOGEX 0, 0, 320, 200
+IDD_TEST_DIALOG DIALOGEX 0, 0, 290, 194
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 EXSTYLE WS_EX_APPWINDOW
 CAPTION "IP地址侦测"
 FONT 9, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
-    CONTROL         "",IDC_IPADDRESS1,"SysIPAddress32",WS_TABSTOP,55,138,100,15
-    CONTROL         "",IDC_IPADDRESS2,"SysIPAddress32",WS_TABSTOP,54,157,100,15
-    PUSHBUTTON      "检查IP",IDC_BUTTON1,181,137,34,14
-    PUSHBUTTON      "保存结果",IDC_BUTTON2,227,138,34,14
-    PUSHBUTTON      "关于",IDC_BUTTON3,272,137,34,14
-    PUSHBUTTON      "停止",IDC_BUTTON4,181,156,34,14
-    PUSHBUTTON      "清除结果",IDC_BUTTON5,227,156,34,14
-    PUSHBUTTON      "关闭",IDC_BUTTON6,272,156,34,14
-    CTEXT           "目前的活动连接",IDC_STATIC,22,21,84,8
-    LTEXT           "以下是正在使用的IP地址和对应网卡的MAC地址",IDC_STATIC,21,42,144,8
-    LTEXT           "以下是未被使用的IP地址",IDC_STATIC,199,41,76,8
-    LTEXT           "开始IP",IDC_STATIC,19,142,21,8
-    LTEXT           "结束IP",IDC_STATIC,17,161,21,8
-    LISTBOX         IDC_LIST2,196,58,93,72,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
-    COMBOBOX        IDC_COMBO1,112,18,165,41,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
-    CONTROL         "",IDC_LIST3,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,20,61,153,66
+    CONTROL         "",IDC_IPADDRESS1,"SysIPAddress32",WS_TABSTOP,70,138,100,15
+    CONTROL         "",IDC_IPADDRESS2,"SysIPAddress32",WS_TABSTOP,70,158,100,15
+    PUSHBUTTON      "检查IP",IDC_BUTTON1,186,138,34,14
+    PUSHBUTTON      "关于",IDC_BUTTON3,227,137,34,14
+    PUSHBUTTON      "清除结果",IDC_BUTTON5,186,158,34,14
+    PUSHBUTTON      "关闭",IDC_BUTTON6,227,159,34,14
+    CTEXT           "目前的活动连接",IDC_STATIC,29,23,69,8
+    LTEXT           "以下是正在使用的IP地址和对应网卡的MAC地址",IDC_STATIC,59,43,144,8
+    LTEXT           "开始IP",IDC_STATIC,38,143,21,8
+    LTEXT           "结束IP",IDC_STATIC,38,158,21,8
+    COMBOBOX        IDC_COMBO1,93,21,165,41,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_LIST3,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,38,61,220,66
 END
 
 
@@ -135,13 +131,13 @@ BEGIN
     BEGIN
         BLOCK "080403a8"
         BEGIN
-            VALUE "CompanyName", "TODO: <ZhengZhou University>"
-            VALUE "FileDescription", "TODO: <文件说明>"
+            VALUE "CompanyName", "<ZhengZhou University>"
+            VALUE "FileDescription", "空闲IP侦测"
             VALUE "FileVersion", "1.0.0.1"
             VALUE "InternalName", "test.exe"
-            VALUE "LegalCopyright", "TODO: (C) <ZhengZhou University>。保留所有权利。"
+            VALUE "LegalCopyright", " (C) <ZhengZhou University>。保留所有权利。"
             VALUE "OriginalFilename", "test.exe"
-            VALUE "ProductName", "TODO: <空闲IP侦测>"
+            VALUE "ProductName", " <空闲IP侦测>"
             VALUE "ProductVersion", "1.0.0.1"
         END
     END
@@ -170,13 +166,24 @@ BEGIN
 
     IDD_TEST_DIALOG, DIALOG
     BEGIN
-        LEFTMARGIN, 7
-        RIGHTMARGIN, 312
+        LEFTMARGIN, 13
+        RIGHTMARGIN, 282
         TOPMARGIN, 7
-        BOTTOMMARGIN, 193
+        BOTTOMMARGIN, 187
     END
 END
 #endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR1 ACCELERATORS 
+BEGIN
+    VK_RETURN,      ID_ACCELERATOR32771,    VIRTKEY, NOINVERT
+END
 
 
 /////////////////////////////////////////////////////////////////////////////
